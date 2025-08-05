@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tic Tac Toe Game
+
+A simple Tic Tac Toe game built with modern web technologies. I created this project to practice my React skills.
+
+## Description
+
+This is a classic Tic Tac Toe game where two players take turns marking spaces on a 3x3 grid. A player wins by placing three marks in a horizontal, vertical, or diagonal row.
+
+## Features
+
+- Interactive game board
+- Two-player gameplay
+- Win detection
+- Game reset option
+- Clean interface
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Web browser
+- Node.js (for development)
+
+### Installation
+
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/SarathiPrabu/tic-tac-toe.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Go to project directory
+```bash
+cd tic-tac-toe
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Install dependencies
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start development server
+```bash
+npm run dev
+```
 
-## Learn More
+## How to Play
 
-To learn more about Next.js, take a look at the following resources:
+1. Player X starts the game
+2. Players take turns clicking empty squares
+3. Get three marks in a row to win
+4. Game ends in a draw if all squares are filled with no winner
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Tailwind
+- TypeScript
+- React
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project uses the MIT License - see the LICENSE file for details
