@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+body {
+  background-color: #dad7cd; /* Set the background color */
+}
+
+.card {
+  background-color: #a3b18a; /* Set the card color */
+  border-radius: 0.5rem; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 1.5rem; /* Add padding inside the card */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: inline;
+}
+
+.font-cursive {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-script {
+  font-family: 'Style Script', cursive;
+}
