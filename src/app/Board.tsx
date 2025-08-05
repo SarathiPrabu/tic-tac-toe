@@ -4,7 +4,7 @@ import './Board.css'; // Import the CSS file for animations
 
 interface SquareProps {
   value: string; // "X", "O", or null
-  onSquareClick: any; // function to handle click events
+  onSquareClick: () => void; // function to handle click events
   highlight: boolean; // prop to indicate if the square should be highlighted
 }
 
