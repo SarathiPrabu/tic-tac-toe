@@ -47,14 +47,16 @@ export default function Board() {
   let status;
   if (winner) {
     status = "Winner: " + winner;
+  } else if (squares.every((square) => square !== null)) {
+    status = "!! Draw !!";
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
   return (
     <div className="flex flex-col items-center mt-10">
-      <div className="card w-80 shadow-2xl  p-6 bg-[#a3b18a] rounded-lg">
-        <div className="text-center text-3xl  mb-4 font-cursive">{status}</div>
+      <div className="card w-80 shadow-2xl p-6 bg-[#a3b18a] rounded-lg">
+        <div className="text-center text-3xl mb-4 font-cursive">{status}</div>
         <div className="flex justify-center">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} highlight={winningPositions.includes(0)} />
           <Square value={squares[1]} onSquareClick={() => handleClick(1)} highlight={winningPositions.includes(1)} />
@@ -71,8 +73,7 @@ export default function Board() {
           <Square value={squares[8]} onSquareClick={() => handleClick(8)} highlight={winningPositions.includes(8)} />
         </div>
         <button
-          className="mt-4 w-full px-4 py-2 bg-[#588157] text-white font-bold rounded
-           hover:bg-[#6a9b6b] focus:outline-none focus:ring-2 focus:ring-[#588157] "
+          className="mt-4 w-full px-4 py-2 bg-[#588157] text-white font-bold rounded hover:bg-[#6a9b6b] focus:outline-none focus:ring-2 focus:ring-[#588157]"
           onClick={resetGame}>
           Reset
         </button>
@@ -91,7 +92,7 @@ function calculateWinner(squares: string[]) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
